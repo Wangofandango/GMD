@@ -1,4 +1,4 @@
-# Guild Master: Pixel Quest - Game Design Document
+# Guildmaster for a day - Game Design Document
 
 ## Introduction
 
@@ -144,7 +144,11 @@ Inside of the armory the player will be able to equip themselves and other guild
 In the first iteration of the game, each guildmember and the main player will be able to equip 1 weapon and 1 armor piece. To increase their damage and vitality respectively.
 
 #### Magic System *(Not implemented in first iteration of the game)*
- 
+
+
+### Milestones
+1. Movement and Making interactables
+2. 
 
 
 
