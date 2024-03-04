@@ -30,12 +30,14 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 ProcessInputs()
     {
-        return new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        return new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
     }
 
     private void Move()
     {
-        _rb.velocity = new Vector2(_movementDirection.x , _movementDirection.y) * movementSpeed;
+        Vector2 deltaSpeed =  _movementDirection * (Time.fixedDeltaTime * movementSpeed);
+        
+        _rb.MovePosition((Vector2) transform.position + deltaSpeed);
     }
     
 }
