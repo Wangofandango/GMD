@@ -53,7 +53,12 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-        _interactionLayer = LayerMask.GetMask(ProjectData.Layers.Interactable.Name);
+        
+        LayerMask interactableLayer = LayerMask.GetMask(ProjectData.Layers.Interactable.Name) | LayerMask.GetMask(ProjectData.Layers.Default.Name);
+        //LayerMask playerLayer = LayerMask.GetMask(ProjectData.Layers.Player.Name);
+        //int ignorePlayerLayer = ~playerLayer;
+        _interactionLayer = interactableLayer;
+
     }
 
     // Update is called once per frame

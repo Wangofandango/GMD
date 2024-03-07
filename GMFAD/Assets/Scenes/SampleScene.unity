@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 1115449216}
   - component: {fileID: 1115449220}
   - component: {fileID: 1115449221}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  interactionDistance: 4
+  interactionDistance: 2
 --- !u!212 &1115449218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5751,7 +5751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527109407}
   - component: {fileID: 1527109408}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
