@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  interactionDistance: 1
+  interactionDistance: 4
 --- !u!212 &1115449218
 SpriteRenderer:
   m_ObjectHideFlags: 0
