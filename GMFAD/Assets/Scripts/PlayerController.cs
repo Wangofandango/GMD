@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
         Debug.DrawRay(position, direction, Color.red, interactionDistance);
         //Make a raycast in the direction the player is facing
         RaycastHit2D hit = Physics2D.Raycast(position, direction, interactionDistance, _interactionLayer);
+        //Change this if statement to avoid nullreference exception
         if (hit.collider.TryGetComponent(out Iinteractable interactable))
         {
             interactable.Interact(gameObject);
