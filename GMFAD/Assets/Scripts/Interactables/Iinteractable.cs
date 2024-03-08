@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
-using UnityEngine.Events;
 
-namespace Interfaces
+namespace Interactables
 {
     public interface Iinteractable
     {
