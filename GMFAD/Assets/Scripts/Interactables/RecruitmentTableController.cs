@@ -12,37 +12,26 @@ namespace Interactables
     public class RecruitmentTableController : MonoBehaviour, Iinteractable
     {
         [SerializeField]
-        public GameObject recruitmentUI;
-
+        public RecruitmentUI recruitmentUI;
+            
         private List<GuildMemberData> _guildMembers;
         
         // Temporary method
         private ClassBlueprint[] _classBlueprints; //Must always be the same number as the number of recruitment options
         
-        // Recruitment Options to show:
-        private const int _recruitmentOptionsCount = 4;
-        private List<GameObject> _recruitmentOptions = new List<GameObject>();
         
+        public const int MaxRecruitmentOptions = 4;
         private void Awake()
         {
-            recruitmentUI = GameObject.Find("Recruitment Selection");
             _guildMembers = new List<GuildMemberData>();
             _classBlueprints = ClassBlueprint.Classes;
-
-            foreach (Transform child in recruitmentUI.transform)
-            {
-                //Is this a recruitment option?
-                if (child.CompareTag(ProjectData.Tags.UI_RecruitmentOption.Name))
-                {
-                    _recruitmentOptions.Add(child.gameObject);
-                }
-            }
+            
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            recruitmentUI.SetActive(false);
+            recruitmentUI.Hide();
         }
 
         // Update is called once per frame
@@ -59,16 +48,9 @@ namespace Interactables
                 _guildMembers.Add(GuildMemberFactory.GenerateGuildMember(classBlueprint));
             }
 
-            for (int i = 0; i < _recruitmentOptionsCount; i++)
-            {
-                var guildMember = _guildMembers[i];
-                var recruitmentOption = _recruitmentOptions[i];
-                
-                recruitmentOption.GetComponentInChildren<TextMeshProUGUI>().text = guildMember.Name;
-                //recruitmentOption.GetComponentInChildren<Image>().sprite = guildMember.ClassType.Sprite;
-            }
+            recruitmentUI.UpdateRecruitmentOptions(_guildMembers);
             
-            recruitmentUI.SetActive(true);
+            recruitmentUI.Show();
         }
         
 
