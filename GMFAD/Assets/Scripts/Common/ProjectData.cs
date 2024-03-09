@@ -21,8 +21,10 @@ namespace Common
         {
             public static readonly Tags Player = new Tags(0, "Player");
             public static readonly Tags Interactable = new Tags(1, "Interactable");
-
+            public static readonly Tags UI_RecruitmentOption = new Tags(2, "UI_RecruitmentOption");
             protected Tags(int value, string name) : base(value, name) { }
+
+            
         }
     }
 }
