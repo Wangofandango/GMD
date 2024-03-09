@@ -145,6 +145,8 @@ GameObject:
   - component: {fileID: 6865042928482891842}
   - component: {fileID: 5585717842656706188}
   - component: {fileID: 271433617896585282}
+  - component: {fileID: 4555742423723386791}
+  - component: {fileID: -4811975159179058736}
   m_Layer: 5
   m_Name: Recruitment Option
   m_TagString: UI_RecruitmentOption
@@ -212,6 +214,34 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4555742423723386791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964467406053004654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b1602ec9bf27be4d827ac2e3dc1ce58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ImageToHightlight: {fileID: 0}
+--- !u!114 &-4811975159179058736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964467406053004654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f752667446fb0fa439bc85ae40a77b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: {fileID: 4094095219750315468}
+  _className: {fileID: 6913397443839769193}
+  sprite: {fileID: 1682595133035241302}
 --- !u!1 &7591206798607450066
 GameObject:
   m_ObjectHideFlags: 0

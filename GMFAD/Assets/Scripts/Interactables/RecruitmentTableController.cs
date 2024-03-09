@@ -31,7 +31,13 @@ namespace Interactables
         // Start is called before the first frame update
         void Start()
         {
+            recruitmentUI.OnRecruit += (guildMemberData) => FinalizeRecruitment(guildMemberData);
             recruitmentUI.Hide();
+        }
+
+        private void FinalizeRecruitment(GuildMemberData guildMemberData)
+        {
+            Debug.Log("Recruiting " + guildMemberData.Name);
         }
 
         // Update is called once per frame

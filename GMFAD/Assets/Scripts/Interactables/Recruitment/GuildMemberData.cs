@@ -33,5 +33,10 @@ namespace Interactables.Recruitment
             
             //Subscribe to any other events
         }
+        
+        public void Recruit()
+        {
+            Debug.Log(Data.Name + ": Halleliujah! I have been recruited!");
+        }
     }
 }
