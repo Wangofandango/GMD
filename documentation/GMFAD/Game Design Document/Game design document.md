@@ -147,7 +147,7 @@ In the first iteration of the game, each guildmember and the main player will be
 
 
 ### Milestones
-1. Movement and Making interactables
+1. Movement and the Core Loop component called "Buying/Upgrading". Be able to hire new Members and buy new items.
 2. 
 
 
