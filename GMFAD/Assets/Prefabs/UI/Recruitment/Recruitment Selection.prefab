@@ -351,10 +351,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recruitButton: {fileID: 1350834878742337062}
   recruitmentOptions:
-  - {fileID: 7135781452229031790}
-  - {fileID: 8584499905251546391}
-  - {fileID: 4263764384453746877}
-  - {fileID: 8062017503706293414}
+  - {fileID: 1934957634621080528}
+  - {fileID: 1080723128504492457}
+  - {fileID: 4825279097032168451}
+  - {fileID: 1603053797378002968}
 --- !u!1 &9049163383570395535
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,6 +497,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6921735921015930964}
     m_Modifications:
+    - target: {fileID: 1237174475602062084, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -149.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436652688169623849, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -99.999985
+      objectReference: {fileID: 0}
     - target: {fileID: 4964467406053004654, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
       propertyPath: m_Name
       value: Recruitment Option
@@ -590,11 +598,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
---- !u!1 &7135781452229031790 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4964467406053004654, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+--- !u!114 &1934957634621080528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4811975159179058736, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
   m_PrefabInstance: {fileID: 2873920680907629056}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f752667446fb0fa439bc85ae40a77b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8694128205929536066 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6865042928482891842, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
@@ -608,13 +622,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6921735921015930964}
     m_Modifications:
+    - target: {fileID: 1237174475602062084, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -149.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436652688169623849, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -99.999985
+      objectReference: {fileID: 0}
     - target: {fileID: 4964467406053004654, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
       propertyPath: m_Name
       value: Recruitment Option
       objectReference: {fileID: 0}
     - target: {fileID: 5430772817652932004, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00000023842
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6865042928482891842, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
       propertyPath: m_Pivot.x
@@ -701,11 +723,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
---- !u!1 &8062017503706293414 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4964467406053004654, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+--- !u!114 &1603053797378002968 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4811975159179058736, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
   m_PrefabInstance: {fileID: 3100551292103061960}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f752667446fb0fa439bc85ae40a77b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8377494457610258826 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6865042928482891842, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
@@ -719,6 +747,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6921735921015930964}
     m_Modifications:
+    - target: {fileID: 1237174475602062084, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -149.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436652688169623849, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -99.999985
+      objectReference: {fileID: 0}
     - target: {fileID: 4964467406053004654, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
       propertyPath: m_Name
       value: Recruitment Option
@@ -808,14 +844,20 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+--- !u!114 &1080723128504492457 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4811975159179058736, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+  m_PrefabInstance: {fileID: 3730970486951100537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f752667446fb0fa439bc85ae40a77b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7818980988115515451 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6865042928482891842, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
-  m_PrefabInstance: {fileID: 3730970486951100537}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8584499905251546391 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4964467406053004654, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
   m_PrefabInstance: {fileID: 3730970486951100537}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9209504805240223187
@@ -826,6 +868,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6921735921015930964}
     m_Modifications:
+    - target: {fileID: 1237174475602062084, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -149.99998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436652688169623849, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -99.999985
+      objectReference: {fileID: 0}
     - target: {fileID: 4964467406053004654, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
       propertyPath: m_Name
       value: Recruitment Option
@@ -920,8 +970,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6865042928482891842, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
   m_PrefabInstance: {fileID: 9209504805240223187}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4263764384453746877 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4964467406053004654, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
+--- !u!114 &4825279097032168451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -4811975159179058736, guid: 600ac1d3d381f8444aaf128d1d3cac4d, type: 3}
   m_PrefabInstance: {fileID: 9209504805240223187}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f752667446fb0fa439bc85ae40a77b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
