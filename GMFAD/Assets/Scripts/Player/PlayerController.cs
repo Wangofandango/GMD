@@ -3,6 +3,7 @@ using Common;
 using Interaction_System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -10,7 +11,7 @@ namespace Player
     {
         private PlayerInputActions _playerControls;
          
-        [SerializeField] private Interaction _interaction;
+        private Interactor interactor;
         [SerializeField] private Movement.Movement _movement;
 
         private InputAction _movementInput;
@@ -23,7 +24,7 @@ namespace Player
         private void Start()
         {
             _movement = GetComponent<Movement.Movement>();
-            _interaction = GetComponentInChildren<Interaction>();
+            interactor = GetComponentInChildren<Interactor>();
         }
 
         private void OnEnable()
@@ -47,7 +48,7 @@ namespace Player
             
             if (_interactionInput.triggered)
             {
-                _interaction.CheckForInteractions();
+                interactor.CheckForInteractions();
             }
         }
 

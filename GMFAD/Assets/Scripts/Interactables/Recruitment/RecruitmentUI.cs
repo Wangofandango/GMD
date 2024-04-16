@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class RecruitmentUI : MonoBehaviour
+public class RecruitmentUI : MonoBehaviour, IUserInterface
 {
     
     
@@ -96,3 +96,4 @@ public class RecruitmentUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 }
+
