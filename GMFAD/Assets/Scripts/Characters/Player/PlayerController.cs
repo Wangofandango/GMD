@@ -1,11 +1,9 @@
-using System;
-using Common;
+using GameLogic;
 using Interaction_System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 
-namespace Player
+namespace Characters.Player
 {
     public class PlayerController : MonoBehaviour
     {
@@ -13,6 +11,8 @@ namespace Player
          
         private Interactor interactor;
         [SerializeField] private Movement.Movement _movement;
+        
+        GameManager gameManager;
 
         private InputAction _movementInput;
         private InputAction _interactionInput;
@@ -25,6 +25,10 @@ namespace Player
         {
             _movement = GetComponent<Movement.Movement>();
             interactor = GetComponentInChildren<Interactor>();
+            
+            //Start the game
+            gameManager = GameManager.Instance;
+            gameManager.StartGame();
         }
 
         private void OnEnable()

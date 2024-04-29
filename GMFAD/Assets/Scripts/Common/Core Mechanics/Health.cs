@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Common.Core_Mechanics
 {
-    public class Health : MonoBehaviour
+    public class Health : ScriptableObject
     {
         public int MaxHealth { get; set; }
         private int CurrentHealth { get; set; }
@@ -11,11 +11,11 @@ namespace Common.Core_Mechanics
         public event Action OnDeath;
 
 
-        private void Start()
+        private void Awake()
         {
             CurrentHealth = MaxHealth;
         }
-        
+
         public void TakeDamage(int damage)
         {
             CurrentHealth -= damage;

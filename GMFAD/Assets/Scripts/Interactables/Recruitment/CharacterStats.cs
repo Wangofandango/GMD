@@ -1,6 +1,8 @@
-﻿namespace Interactables.Recruitment
+﻿using UnityEngine;
+
+namespace Interactables.Recruitment
 {
-    public class CharacterStats
+    public class CharacterStats : MonoBehaviour
     {
         public int Health { get; set; }
         public int Physical { get; set; }
@@ -12,10 +14,12 @@
             Physical = physical;
             Magical = magical;
         }
-
+        
         public CharacterStats()
         {
-            
+            Health = 0;
+            Physical = 0;
+            Magical = 0;
         }
     }
 }

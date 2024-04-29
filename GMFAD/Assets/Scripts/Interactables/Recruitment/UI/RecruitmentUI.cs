@@ -50,11 +50,7 @@ public class RecruitmentUI : MonoBehaviour, IUserInterface
         });
     }
     
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     public void OnOptionClick(int index)
     {

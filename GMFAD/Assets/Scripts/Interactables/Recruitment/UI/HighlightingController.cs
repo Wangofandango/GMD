@@ -15,7 +15,7 @@ public class HighlightingController : MonoBehaviour, IPointerDownHandler
     // Start is called before the first frame update
     void Start()
     {
-        
+        ImageToHightlight = GetComponent<Image>();
     }
 
     // Update is called once per frame

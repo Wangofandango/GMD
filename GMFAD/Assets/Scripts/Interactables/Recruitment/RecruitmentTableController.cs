@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Characters.Guildmembers;
 using Common;
+using Common.Core_Mechanics;
 using Common.Utils;
 using Interactables.Recruitment;
 using TMPro;
@@ -13,7 +15,16 @@ namespace Interactables
     {
         [SerializeField]
         public RecruitmentUI recruitmentUI;
-            
+
+        [SerializeField] public GameObject TavernGameObject;
+        [SerializeField] public InventoryManager TavernInventoryManager;
+
+        [SerializeField]
+        public GameObject guildmemberPrefab;
+        
+        private GameObject _interactor;
+        
+        
         private List<GuildMemberData> _guildMembers;
         
         // Temporary method
@@ -25,7 +36,6 @@ namespace Interactables
         {
             _guildMembers = new List<GuildMemberData>();
             _classBlueprints = ClassBlueprint.Classes;
-            
         }
 
         // Start is called before the first frame update
@@ -33,11 +43,29 @@ namespace Interactables
         {
             recruitmentUI.OnRecruit += (guildMemberData) => FinalizeRecruitment(guildMemberData);
             recruitmentUI.Hide();
+
+            TavernGameObject = transform.parent.gameObject;
+            TavernInventoryManager = GetComponentInParent<InventoryManager>();
         }
 
         private void FinalizeRecruitment(GuildMemberData guildMemberData)
         {
+            GameObject newMember = Instantiate(guildmemberPrefab, GetInteractorPosition(), Quaternion.identity);
+
+            GuildMemberController guildMemberScript = newMember.GetComponent<GuildMemberController>();
+            
+            guildMemberScript.Data = guildMemberData;
+            
+            TavernInventoryManager.AddGuildMember(guildMemberScript);
+            
+            
             Debug.Log("Recruiting " + guildMemberData.Name);
+        }
+
+        private Vector3 GetInteractorPosition()
+        {
+            // Spawning slightly to the right of the player
+            return _interactor.transform.position + new Vector3(1, 0, 0);
         }
 
         // Update is called once per frame
@@ -64,6 +92,7 @@ namespace Interactables
         {
             if (interactor.CompareTag("Player"))
             {
+                _interactor = interactor;
                 InitiateRecruitment();
             }
         }
