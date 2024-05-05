@@ -11,5 +11,7 @@ namespace Interactables.Recruitment
         public CharacterStats Stats { get; set; }
         
         public string Name { get; set; }
+        
+        public GameObject Prefab { get; set; }
     }
 }
