@@ -1,18 +1,23 @@
 using System.Collections;
+using Common.Core_Mechanics;
 using Interactables.Recruitment;
 using UnityEngine;
 using UnityEngine.AI;
 
 namespace Characters.Guildmembers
 {
-    public class GuildMemberController : MonoBehaviour
+    public class GuildMemberController : MonoBehaviour, IInventoryItem
     {
         public GuildMemberData Data { get; set; }
+        
+        
+        public Transform walkingArea;
         
         //private Health Health { get; set; }
 
         private NavMeshAgent agent;
 
+        
         private void Awake()
         {
             //Health = GetComponent<Health>();
@@ -28,7 +33,6 @@ namespace Characters.Guildmembers
         
         public void RecruitmentSuccess()
         {
-            Debug.Log(Data.Name + ": Halleliujah! I have been recruited!");
         }
 
         public IEnumerator StartWalking(Transform area)
@@ -54,6 +58,17 @@ namespace Characters.Guildmembers
                 // Wait for a random amount of time before choosing a new target
                 yield return new WaitForSeconds(Random.Range(2.0f, 5.0f));
             }
+        }
+
+        public void OnAddedToInventory()
+        {
+            Debug.Log(Data.Name + ": Halleliujah! I have been recruited!");
+            StartCoroutine(StartWalking(walkingArea)); // (assuming StartWalking exists)
+        }
+
+        public void OnRemovedFromInventory()
+        {
+            GetComponent<NavMeshAgent>().enabled = false;
         }
     }
 }

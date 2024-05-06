@@ -4905,6 +4905,7 @@ GameObject:
   - component: {fileID: 1349041357}
   - component: {fileID: 1349041358}
   - component: {fileID: 1349041359}
+  - component: {fileID: 1349041360}
   m_Layer: 0
   m_Name: Tavern
   m_TagString: Untagged
@@ -4957,6 +4958,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   temporaryGuildMemberPrefab: {fileID: 7494603166539777034, guid: 634b6df28cc03994b909dabd61df205b, type: 3}
   guildMemberBaseArea: {fileID: 1083254757}
+--- !u!114 &1349041360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349041356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f74f9f0a134e5c860b4c25230b1b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1369957071
 GameObject:
   m_ObjectHideFlags: 0
@@ -44776,6 +44789,14 @@ PrefabInstance:
     - target: {fileID: 4781859419610240250, guid: 91ebc75b304616a4b80e5f7fb74fa561, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -99.999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881154405891555689, guid: 91ebc75b304616a4b80e5f7fb74fa561, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 48.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5881154405891555689, guid: 91ebc75b304616a4b80e5f7fb74fa561, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -123
       objectReference: {fileID: 0}
     - target: {fileID: 6921735921015930964, guid: 91ebc75b304616a4b80e5f7fb74fa561, type: 3}
       propertyPath: m_Pivot.x

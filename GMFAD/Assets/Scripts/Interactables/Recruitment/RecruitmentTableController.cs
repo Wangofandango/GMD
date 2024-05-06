@@ -5,6 +5,7 @@ using Common;
 using Common.Core_Mechanics;
 using Common.Utils;
 using Interactables.Recruitment;
+using Tavern;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,13 +17,14 @@ namespace Interactables
         [SerializeField]
         public RecruitmentUI recruitmentUI;
 
-        [SerializeField] public GameObject TavernGameObject;
-        [SerializeField] public InventoryManager TavernInventoryManager;
+        //[SerializeField] public InventoryManager TavernInventoryManager;
 
         [SerializeField]
         public GameObject guildmemberPrefab;
         
         private GameObject _interactor;
+        
+        public TavernManager tavernManager;
         
         
         private List<GuildMemberData> _guildMembers;
@@ -44,20 +46,15 @@ namespace Interactables
             recruitmentUI.OnRecruit += (guildMemberData) => FinalizeRecruitment(guildMemberData);
             recruitmentUI.Hide();
 
-            TavernGameObject = transform.parent.gameObject;
-            TavernInventoryManager = GetComponentInParent<InventoryManager>();
+            tavernManager = GetComponentInParent<TavernManager>();
+            //TavernInventoryManager = GetComponentInParent<InventoryManager>();
         }
 
         private void FinalizeRecruitment(GuildMemberData guildMemberData)
         {
-            GameObject newMember = Instantiate(guildmemberPrefab, GetInteractorPosition(), Quaternion.identity);
-
-            GuildMemberController guildMemberScript = newMember.GetComponent<GuildMemberController>();
+            tavernManager.AddMember(guildMemberData);
             
-            guildMemberScript.Data = guildMemberData;
-            
-            TavernInventoryManager.AddGuildMember(guildMemberScript);
-            
+            recruitmentUI.Hide();
             
             Debug.Log("Recruiting " + guildMemberData.Name);
         }

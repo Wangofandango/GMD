@@ -2,7 +2,7 @@
 
 namespace Interactables.Recruitment
 {
-    public class CharacterStats : MonoBehaviour
+    public class CharacterStats
     {
         public int Health { get; set; }
         public int Physical { get; set; }

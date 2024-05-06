@@ -19,12 +19,7 @@ namespace Interactables.Recruitment
             //From the Class blueprint, make a stats object and give to the guildmember
             CharacterStats stats = CalculateStats(randomClass);
             
-            GuildMemberData newGuildMemberData = new GuildMemberData
-            {
-                ClassType = randomClass.ClassType,
-                Stats = stats,
-                Name = randomName
-            };
+            GuildMemberData newGuildMemberData = ScriptableObject.CreateInstance<GuildMemberData>();
             
             return newGuildMemberData;
         }
@@ -37,12 +32,7 @@ namespace Interactables.Recruitment
             //From the Class blueprint, make a stats object and give to the guildmember
             CharacterStats stats = CalculateStats(classBlueprint);
             
-            GuildMemberData newGuildMemberData = new GuildMemberData
-            {
-                ClassType = classBlueprint.ClassType,
-                Stats = stats,
-                Name = randomName
-            };
+            GuildMemberData newGuildMemberData = ScriptableObject.CreateInstance<GuildMemberData>();
             
             return newGuildMemberData;
         }

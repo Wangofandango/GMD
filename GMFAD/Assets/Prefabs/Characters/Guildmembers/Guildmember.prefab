@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e91baa305cfa7b4d8cd16e2ea9c46bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkingArea: {fileID: 0}
 --- !u!195 &-8270380340685295868
 NavMeshAgent:
   m_ObjectHideFlags: 0

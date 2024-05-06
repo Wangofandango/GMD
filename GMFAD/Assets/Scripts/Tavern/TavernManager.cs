@@ -1,6 +1,7 @@
 ﻿using System;
 using Characters.Guildmembers;
 using Common.Core_Mechanics;
+using Interactables.Recruitment;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,7 +9,8 @@ namespace Tavern
 {
     public class TavernManager : MonoBehaviour
     {
-        private GenericInventory<GuildMemberController> inventoryManager;
+        private GenericInventory inventoryManager;
+        
         
         [SerializeField] public GameObject temporaryGuildMemberPrefab;
         
@@ -16,31 +18,33 @@ namespace Tavern
         
         private void Awake()
         {
-            inventoryManager = GetComponent<GenericInventory<GuildMemberController>>();
+            inventoryManager = GetComponent<GenericInventory>();
         }
-
+        
         private void Start()
         {
-            inventoryManager.OnItemAdded += OnGuildMemberRecruited;
             
         }
-        
-        private void OnGuildMemberRecruited(GuildMemberController guildMember)
-        {
-            
-            //Instansiate the guild member in the tavern
-            var tavernTransform = transform;
-            
-            // Temporary solution
-            guildMember.Data.Prefab = temporaryGuildMemberPrefab;
-            
-            GameObject newGuildMember = Instantiate(guildMember.Data.Prefab, transform.position, transform.rotation);
-            newGuildMember.GetComponent<NavMeshAgent>().enabled = true; // Enable NavMeshAgent
 
+        public void AddMember(GuildMemberData guildMemberData)
+        {
+            // Create a new GuildMemberController instance
+            guildMemberData.Prefab = temporaryGuildMemberPrefab;
+            
+            GameObject newGuildMember = Instantiate(guildMemberData.Prefab, guildMemberBaseArea.position, guildMemberBaseArea.rotation);
+            
+            
             // Initiate the StartWalkingAround coroutine
             GuildMemberController newMemberController = newGuildMember.GetComponent<GuildMemberController>();
-            StartCoroutine(newMemberController.StartWalking(guildMemberBaseArea));
+            
+            newMemberController.Data = guildMemberData;
+            
+            newMemberController.walkingArea = guildMemberBaseArea;
+            
+            //Add to my inventory
+            inventoryManager.AddItem(newMemberController);
+            
+            newMemberController.OnAddedToInventory(); // Call OnAddedToInventory after instantiation
         }
-        
     }
 }

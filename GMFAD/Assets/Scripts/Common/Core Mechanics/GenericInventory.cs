@@ -4,31 +4,26 @@ using UnityEngine;
 
 namespace Common.Core_Mechanics
 {
-    public class GenericInventory<T> : MonoBehaviour
+    public class GenericInventory : MonoBehaviour
     {
-        public List<T> Items { get; set; }
-        public event Action<T> OnItemAdded; 
-        public event Action<T> OnItemRemoved; 
-        
-        
-        public GenericInventory()
-        {
-            Items = new List<T>();
-        }
+        public List<IInventoryItem> Items { get; set; } = new();
+        public event Action<IInventoryItem> OnItemAdded; 
+        public event Action<IInventoryItem> OnItemRemoved;
 
-        public void AddItem(T item)
+
+        public void AddItem(IInventoryItem item)
         {
             Items.Add(item);
             OnItemAdded?.Invoke(item); // Trigger the event with the added item
         }
 
-        public void RemoveItem(T item)
+        public void RemoveItem(IInventoryItem item)
         {
             Items.Remove(item);
             OnItemRemoved?.Invoke(item); // Trigger the event with the removed item
         }
 
-        public List<T> GetItems()
+        public List<IInventoryItem> GetItems()
         {
             return Items;
         }
