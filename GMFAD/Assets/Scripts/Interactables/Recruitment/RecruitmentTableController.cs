@@ -19,8 +19,6 @@ namespace Interactables
 
         //[SerializeField] public InventoryManager TavernInventoryManager;
 
-        [SerializeField]
-        public GameObject guildmemberPrefab;
         
         private GameObject _interactor;
         
@@ -43,7 +41,7 @@ namespace Interactables
         // Start is called before the first frame update
         void Start()
         {
-            recruitmentUI.OnRecruit += (guildMemberData) => FinalizeRecruitment(guildMemberData);
+            recruitmentUI.OnRecruit += FinalizeRecruitment;
             recruitmentUI.Hide();
 
             tavernManager = GetComponentInParent<TavernManager>();
@@ -54,15 +52,10 @@ namespace Interactables
         {
             tavernManager.AddMember(guildMemberData);
             
+            _guildMembers.Clear();
             recruitmentUI.Hide();
             
             Debug.Log("Recruiting " + guildMemberData.Name);
-        }
-
-        private Vector3 GetInteractorPosition()
-        {
-            // Spawning slightly to the right of the player
-            return _interactor.transform.position + new Vector3(1, 0, 0);
         }
 
         // Update is called once per frame

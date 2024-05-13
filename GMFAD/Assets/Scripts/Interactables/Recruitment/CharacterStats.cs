@@ -8,11 +8,14 @@ namespace Interactables.Recruitment
         public int Physical { get; set; }
         public int Magical { get; set; }
         
-        public CharacterStats(int health, int physical, int magical)
+        public int MovementSpeed { get; set; }
+        
+        public CharacterStats(int health, int physical, int magical, int movementSpeed)
         {
             Health = health;
             Physical = physical;
             Magical = magical;
+            MovementSpeed = movementSpeed;
         }
         
         public CharacterStats()
@@ -20,6 +23,7 @@ namespace Interactables.Recruitment
             Health = 0;
             Physical = 0;
             Magical = 0;
+            MovementSpeed = 0;
         }
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - UI_RecruitmentOption
+  - Walkable
   layers:
   - Default
   - TransparentFX

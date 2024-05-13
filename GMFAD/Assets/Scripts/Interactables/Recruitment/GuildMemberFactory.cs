@@ -34,6 +34,12 @@ namespace Interactables.Recruitment
             
             GuildMemberData newGuildMemberData = ScriptableObject.CreateInstance<GuildMemberData>();
             
+            newGuildMemberData.Name = randomName;
+            
+            newGuildMemberData.Stats = stats;
+            
+            newGuildMemberData.ClassType = classBlueprint.ClassType;
+            
             return newGuildMemberData;
         }
         
@@ -43,7 +49,8 @@ namespace Interactables.Recruitment
             {
                 Health = Random.Range(classBlueprint.Health.Min, classBlueprint.Health.Max),
                 Physical = Random.Range(classBlueprint.Physical.Min, classBlueprint.Physical.Max),
-                Magical = Random.Range(classBlueprint.Magical.Min, classBlueprint.Magical.Max)
+                Magical = Random.Range(classBlueprint.Magical.Min, classBlueprint.Magical.Max),
+                MovementSpeed = Random.Range(classBlueprint.MovementSpeed.Min, classBlueprint.MovementSpeed.Max)
             };
         }
         

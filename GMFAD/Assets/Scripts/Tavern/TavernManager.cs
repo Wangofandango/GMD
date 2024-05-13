@@ -28,8 +28,8 @@ namespace Tavern
 
         public void AddMember(GuildMemberData guildMemberData)
         {
-            // Create a new GuildMemberController instance
             guildMemberData.Prefab = temporaryGuildMemberPrefab;
+            
             
             GameObject newGuildMember = Instantiate(guildMemberData.Prefab, guildMemberBaseArea.position, guildMemberBaseArea.rotation);
             

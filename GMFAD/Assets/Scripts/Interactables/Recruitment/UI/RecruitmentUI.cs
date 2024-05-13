@@ -33,21 +33,6 @@ public class RecruitmentUI : MonoBehaviour, IUserInterface
     // Start is called before the first frame update
     void Start()
     {
-        _highlightingControllers = GetComponentsInChildren<HighlightingController>();
-        for (int i = 0; i < _highlightingControllers.Length; i++)
-        {
-            int index = i; // Create a local copy of i for closure
-            _highlightingControllers[i].OnClick += () => OnOptionClick(index);
-        }
-        
-        recruitButton.onClick.AddListener(() =>
-        {
-            if (HighlightedOption != null)
-            {
-                var guildMember = _optionGuildMemberCombinations[HighlightedOption.GetComponent<RecruitmentOptionController>()];
-                OnRecruit?.Invoke(guildMember);
-            }
-        });
     }
     
    
@@ -67,9 +52,13 @@ public class RecruitmentUI : MonoBehaviour, IUserInterface
     
     public void UpdateRecruitmentOptions(List<GuildMemberData> guildMembers)
     {
+        _optionGuildMemberCombinations.Clear(); // Clear the dictionary when hiding the UI
+        
+        InitializeOptionGuildMemberCombinations();
+        
         for (int i = 0; i < recruitmentOptions.Length; i++)
         {
-            int index = i;
+            int index = i; // This needs to be done for some reason
             AssignGuildMemberToOption(guildMembers[index], recruitmentOptions[index]);
         }
     }
@@ -86,9 +75,33 @@ public class RecruitmentUI : MonoBehaviour, IUserInterface
     {
         gameObject.SetActive(true);
     }
-    
+
+    private void InitializeOptionGuildMemberCombinations()
+    {
+        _highlightingControllers = GetComponentsInChildren<HighlightingController>();
+        for (int i = 0; i < _highlightingControllers.Length; i++)
+        {
+            int index = i; // Create a local copy of i for closure
+            _highlightingControllers[i].OnClick += () => OnOptionClick(index);
+        }
+        
+        recruitButton.onClick.AddListener(() =>
+        {
+            if (HighlightedOption != null)
+            {
+                var guildMember = _optionGuildMemberCombinations[HighlightedOption.GetComponent<RecruitmentOptionController>()];
+                OnRecruit?.Invoke(guildMember);
+            }
+        });
+    }
+
     public void Hide()
     {
+        if (HighlightedOption != null)
+        {
+            HighlightedOption.GetComponent<HighlightingController>().ImageToHightlight.color = Color.white;
+            HighlightedOption = null;
+        }
         gameObject.SetActive(false);
     }
 }

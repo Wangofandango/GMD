@@ -3,6 +3,7 @@ using Common.Core_Mechanics;
 using Interactables.Recruitment;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 
 namespace Characters.Guildmembers
 {
@@ -15,13 +16,13 @@ namespace Characters.Guildmembers
         
         //private Health Health { get; set; }
 
-        private NavMeshAgent agent;
+       // private NavMeshAgent agent;
 
         
         private void Awake()
         {
             //Health = GetComponent<Health>();
-            agent = GetComponent<NavMeshAgent>();
+            //agent = GetComponent<NavMeshAgent>();
         }
 
         private void OnEnable()
@@ -35,35 +36,45 @@ namespace Characters.Guildmembers
         {
         }
 
-        public IEnumerator StartWalking(Transform area)
+        public IEnumerator StartWalking()
         {
             while (true)
             {
-                // Choose a random position within the area
-                Vector3 targetPosition = area.position + Random.insideUnitSphere * area.localScale.magnitude;
+                // Choose a random position within the walking area bounds (2D)
 
-                // Check if the target position is valid on the NavMesh
-                if (NavMesh.SamplePosition(targetPosition, out NavMeshHit hit, 1.0f, NavMesh.AllAreas))
+                //Get a random point within the walking area
+                var localScale = walkingArea.localScale;
+                
+                Vector3 randomoffset = new Vector2(Random.Range(-localScale.x, localScale.x), Random.Range(-localScale.y, localScale.y));
+
+                Vector3 randomPoint = walkingArea.transform.TransformPoint(randomoffset);
+                
+                
+                // Move towards the chosen position
+                while (Vector3.Distance(transform.position, randomPoint) > 0.1f)
                 {
-                    // Set the destination for the NavMeshAgent
-                    agent.SetDestination(hit.position);
-
-                    // Wait until the agent reaches the destination or gets close enough
-                    while (agent.pathPending || (agent.remainingDistance > 0.5f))
-                    {
-                        yield return null;
-                    }
+                    transform.position = Vector3.MoveTowards(transform.position, randomoffset, Time.deltaTime * Data.Stats.MovementSpeed);
+                    yield return null;
                 }
 
-                // Wait for a random amount of time before choosing a new target
-                yield return new WaitForSeconds(Random.Range(2.0f, 5.0f));
+                // Wait behavior can be added here if desired (commented out)
+                float waitTime = Random.Range(2.0f, 5.0f);
+                float elapsedTime = 0f;
+                while (elapsedTime < waitTime)
+                {
+                    elapsedTime += Time.deltaTime;
+                   yield return null;
+                }
             }
         }
+
+
+
 
         public void OnAddedToInventory()
         {
             Debug.Log(Data.Name + ": Halleliujah! I have been recruited!");
-            StartCoroutine(StartWalking(walkingArea)); // (assuming StartWalking exists)
+            StartCoroutine(StartWalking()); // (assuming StartWalking exists)
         }
 
         public void OnRemovedFromInventory()
