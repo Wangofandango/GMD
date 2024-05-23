@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2295084585321516179}
   - component: {fileID: 4901590036210811381}
   - component: {fileID: 5337305712701606671}
+  - component: {fileID: -224951709912352559}
   - component: {fileID: -8270380340685295868}
   - component: {fileID: 9142066436194662322}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Guildmember
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,6 +101,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingArea: {fileID: 0}
+--- !u!114 &-224951709912352559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7494603166539777034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85517f3fec4d8094f85d9276bacdd7f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!195 &-8270380340685295868
 NavMeshAgent:
   m_ObjectHideFlags: 0

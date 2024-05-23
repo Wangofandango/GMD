@@ -38,7 +38,7 @@ namespace GameLogic
         {
             _Instance.PortalManager = _Instance.GameLogic.GetComponentInChildren<PortalManager>();
             
-            _Instance.RoundNumber = 4;
+            _Instance.RoundNumber = 1;
         }
         
 
@@ -48,6 +48,14 @@ namespace GameLogic
             
             PortalManager.InitiatePortals(RoundNumber);
             Debug.Log("Game has started!");
+        }
+
+        public void NextRound()
+        {
+            RoundNumber = RoundNumber++;
+            
+            PortalManager.InitiatePortals(RoundNumber);
+            Debug.Log("Round " + RoundNumber + " has started!");
         }
     }
 }

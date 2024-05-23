@@ -14,7 +14,7 @@ namespace Tavern
         
         [SerializeField] public GameObject temporaryGuildMemberPrefab;
         
-        [SerializeField] public Transform guildMemberBaseArea;
+        [SerializeField] public WalkableArea guildMemberBaseArea;
         
         private void Awake()
         {
@@ -31,7 +31,7 @@ namespace Tavern
             guildMemberData.Prefab = temporaryGuildMemberPrefab;
             
             
-            GameObject newGuildMember = Instantiate(guildMemberData.Prefab, guildMemberBaseArea.position, guildMemberBaseArea.rotation);
+            GameObject newGuildMember = Instantiate(guildMemberData.Prefab, guildMemberBaseArea.GetCenter(), Quaternion.identity);
             
             
             // Initiate the StartWalkingAround coroutine
@@ -40,6 +40,8 @@ namespace Tavern
             newMemberController.Data = guildMemberData;
             
             newMemberController.walkingArea = guildMemberBaseArea;
+
+            newMemberController.PassOnData();
             
             //Add to my inventory
             inventoryManager.AddItem(newMemberController);

@@ -48,7 +48,6 @@ namespace Interaction_System
             if (closestCollider)
             {
                 var interactable = closestCollider.GetComponent<Iinteractable>();
-                
                 interactable?.Interact(interactor);
             }
         }

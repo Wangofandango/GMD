@@ -7,6 +7,8 @@ TagManager:
   - Interactable
   - UI_RecruitmentOption
   - Walkable
+  - Portal
+  - Corner
   layers:
   - Default
   - TransparentFX
