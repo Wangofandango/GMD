@@ -16,6 +16,9 @@ namespace GameLogic
         //Locations to spawn portals
         public List<PortalData> PossiblePortals { get; set; }
 
+        [SerializeField]
+        public AudioSource audioSource;
+        public event Action DungeonCleared;
         
         public enum PortalLocation
         {
@@ -144,43 +147,55 @@ namespace GameLogic
 
         private void Update()
         {
+            // List to store portals for removal
+            List<PortalProgress> portalsToRemove = new List<PortalProgress>();
+    
             // Check if any guildmembers are inside the portals
             foreach (var portal in ActivePortals)
             {
                 if (portal.GuildmembersInside.Count > 0)
                 {
-                    // Handle the logic for when guildmembers are inside the portal
-                    
-                    // Increase the progress of the portal
+                    // Handle logic for guildmembers inside portal
                     portal.Progress++;
-                    
-                    // Check if the progress is at the maximum value
+            
                     if (portal.Progress >= 100)
                     {
-                        // Remove the guildmembers from the portal, by activating them again.
+                        // Add portal to removal list
+                        portalsToRemove.Add(portal);
+                
+                        // Remove guildmembers from the portal
                         foreach (var guildmember in portal.GuildmembersInside)
                         {
                             guildmember.SetActive(true);
                         }
+                
+                        // Remove the portal gameobject
+                        GetComponent<AudioSource>().Play();
                         
-                        //Remove the portal gameobject
                         PortalSpawner.RemovePortal(portal.PortalData.Position);
-                        
-                        // Remove the portal from the list of active portals
-                        ActivePortals.Remove(portal);
+                
                         Debug.Log("Portal at " + portal.PortalData.Location + " has been completed!");
-
-                        if (ActivePortals.Count == 0)
-                        {
-                            Debug.Log("All portals have been completed!");
-                            
-                            // Start the next round
-                            GameManager.Instance.NextRound();
-                        }
-                        
                     }
                 }
             }
+    
+            // Remove portals marked for removal after the loop
+            foreach (var portal in portalsToRemove)
+            {
+                ActivePortals.Remove(portal);
+            }
+    
+            // Check if all portals are completed (optional, can be moved elsewhere)
+            if (ActivePortals.Count == 0)
+            {
+                Debug.Log("All portals have been completed!");
+                
+                // Start the next round
+                GameManager.Instance.NextRound(); // Could also be subscribed to the DungeonCleared event
+        
+                DungeonCleared?.Invoke(); // Trigger DungeonCleared event for giving gold
+            }
         }
+
     }
 }

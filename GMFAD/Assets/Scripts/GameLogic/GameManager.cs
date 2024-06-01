@@ -20,6 +20,8 @@ namespace GameLogic
                     _Instance.GameLogic = GameObject.Find("GameLogic");
 
                     InstansiateFields();
+
+                    SubscribeToEvents();
                     
                     // name it for easy recognition
                     _Instance.name = _Instance.GetType().ToString();
@@ -29,11 +31,27 @@ namespace GameLogic
                 return _Instance;
             }
         }
+
+        private static void SubscribeToEvents()
+        {
+            Instance.PortalManager.DungeonCleared += OnDungeonCleared;
+        }
+
+        private static void OnDungeonCleared()
+        {
+            //Add gold to the user
+            int minGold = 10;
+            int maxGold = 30;
+            int gold = UnityEngine.Random.Range(minGold, maxGold);
+            FindObjectOfType<GoldCounter>().AddGold(gold);
+        }
+
         public GameObject GameLogic;
         public PortalManager PortalManager { get; set; }
         public int RoundNumber { get; set; }
 
         
+
         private static void InstansiateFields()
         {
             _Instance.PortalManager = _Instance.GameLogic.GetComponentInChildren<PortalManager>();

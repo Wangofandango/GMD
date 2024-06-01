@@ -89,6 +89,8 @@ public class RecruitmentUI : MonoBehaviour, IUserInterface
         {
             if (HighlightedOption != null)
             {
+                //Check if the player has enough gold.
+                
                 var guildMember = _optionGuildMemberCombinations[HighlightedOption.GetComponent<RecruitmentOptionController>()];
                 OnRecruit?.Invoke(guildMember);
             }
