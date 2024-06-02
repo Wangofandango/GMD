@@ -31,6 +31,9 @@ namespace Common
         {
             public static readonly Scenes GameScene = new Scenes(0, "GameScene");
             public static readonly Scenes TitleScreen = new Scenes(1, "TitleScreen");
+            public static readonly Scenes SettingsScene = new Scenes(2, "Settings");
+            public static readonly Scenes CreditsScene = new Scenes(3, "Credits");
+            
             protected Scenes(int value, string name) : base(value, name) { }
         }
     }

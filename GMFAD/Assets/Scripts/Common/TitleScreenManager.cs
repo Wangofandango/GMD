@@ -1,25 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
-using Common;
 using UnityEngine;
 
-public class TitleScreenManager : MonoBehaviour
+namespace Common
 {
-    // Start is called before the first frame update
-    void Start()
+    public class TitleScreenManager : MonoBehaviour
     {
+        // Start is called before the first frame update
+        void Start()
+        {
         
-    }
+        }
     
-    public void StartGame()
-    {
-        // Load the first scene
-        UnityEngine.SceneManagement.SceneManager.LoadScene(ProjectData.Scenes.GameScene.Name);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        public void StartGame()
+        {
+            // Load the first scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene(ProjectData.Scenes.GameScene.Name);
+        }
         
+        public void Settings()
+        {
+            // Load the settings scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene(ProjectData.Scenes.SettingsScene.Name);
+        }
+        
+        public void Credits()
+        {
+            // Load the credits scene
+            UnityEngine.SceneManagement.SceneManager.LoadScene(ProjectData.Scenes.CreditsScene.Name);
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+        
+        }
     }
 }
