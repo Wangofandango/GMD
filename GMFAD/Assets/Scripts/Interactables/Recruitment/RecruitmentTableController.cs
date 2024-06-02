@@ -64,7 +64,7 @@ namespace Interactables
         
         }
 
-        public void InitiateRecruitment()
+        public void InitiateRecruitment(GameObject interactor)
         {
             //Generate some Guildmembers
             foreach (var classBlueprint in _classBlueprints)
@@ -83,7 +83,7 @@ namespace Interactables
             if (interactor.CompareTag("Player"))
             {
                 _interactor = interactor;
-                InitiateRecruitment();
+                InitiateRecruitment(interactor);
             }
         }
     }

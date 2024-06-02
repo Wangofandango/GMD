@@ -48,12 +48,7 @@ public class GoldCounter : MonoBehaviour
     
     public bool CanBuy(int amount)
     {
-        if (gold >= amount)
-        {
-            gold -= amount;
-            return true;
-        }
-        return false;
+        return gold >= amount;
     }
     
     public void SpendGold(int amount)

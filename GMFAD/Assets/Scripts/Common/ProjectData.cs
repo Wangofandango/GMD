@@ -26,5 +26,12 @@ namespace Common
 
             
         }
+        
+        public class Scenes : Enumeration<Scenes>
+        {
+            public static readonly Scenes GameScene = new Scenes(0, "GameScene");
+            public static readonly Scenes TitleScreen = new Scenes(1, "TitleScreen");
+            protected Scenes(int value, string name) : base(value, name) { }
+        }
     }
 }

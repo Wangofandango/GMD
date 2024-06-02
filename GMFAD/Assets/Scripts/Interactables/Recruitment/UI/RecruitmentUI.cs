@@ -25,9 +25,11 @@ public class RecruitmentUI : MonoBehaviour, IUserInterface
     //Create hashmap with the recruitment options and the guildmembers
     private Dictionary<RecruitmentOptionController, GuildMemberData> _optionGuildMemberCombinations;
     
+    private GoldCounter _goldCounter;
     void Awake()
     {
         _optionGuildMemberCombinations = new Dictionary<RecruitmentOptionController, GuildMemberData>();
+        _goldCounter = FindObjectOfType<GoldCounter>();
     }
     
     // Start is called before the first frame update
@@ -90,6 +92,16 @@ public class RecruitmentUI : MonoBehaviour, IUserInterface
             if (HighlightedOption != null)
             {
                 //Check if the player has enough gold.
+                if (_goldCounter.CanBuy(10))
+                {
+                    //If the player has enough gold, spend it
+                    _goldCounter.SpendGold(10);
+                }
+                else
+                {
+                    //If the player doesn't have enough gold, return
+                    return;
+                }
                 
                 var guildMember = _optionGuildMemberCombinations[HighlightedOption.GetComponent<RecruitmentOptionController>()];
                 OnRecruit?.Invoke(guildMember);

@@ -55,14 +55,12 @@ namespace GameLogic
         private static void InstansiateFields()
         {
             _Instance.PortalManager = _Instance.GameLogic.GetComponentInChildren<PortalManager>();
-            
-            _Instance.RoundNumber = 1;
         }
         
 
         public void StartGame()
         {
-            RoundNumber = RoundNumber++;
+            RoundNumber = 1;
             
             PortalManager.InitiatePortals(RoundNumber);
             Debug.Log("Game has started!");
@@ -70,8 +68,11 @@ namespace GameLogic
 
         public void NextRound()
         {
-            RoundNumber = RoundNumber++;
+            RoundNumber++;
             
+            FindObjectOfType<RoundCounter>().NextRound(RoundNumber); //This doesn't seem to be very optimized though
+            
+            Debug.Log(RoundNumber);
             PortalManager.InitiatePortals(RoundNumber);
             Debug.Log("Round " + RoundNumber + " has started!");
         }

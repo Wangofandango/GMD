@@ -112,7 +112,6 @@ namespace GameLogic
                 numPortalsToSpawn = 5;
             }
             
-            Debug.Log(numPortalsToSpawn);
             // Spawn portals using a loop
             for (int i = 0; i < numPortalsToSpawn; i++)
             {
