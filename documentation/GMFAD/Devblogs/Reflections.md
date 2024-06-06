@@ -154,9 +154,11 @@ namespace Interactables.Recruitment
 
 - The animations of the character (Talked about in Devlog_2)
 
-![Pictures of animation](Images/db2_Animation.png)
+<img src="Images/db2_Animation.png" width="400" height="550">
 
 - The worldbuilding, and the graphics of the game (Talked about in Devlog_2)
+
+![alt text](Images/db2_StateOfTheGame.png)
 
 - The movement, interaction and player character
 
@@ -166,4 +168,12 @@ The basis of the game, the movement is actually something that i am pretty proud
 
 The tavern actually has it's own grid, with its own layers of tiles. This was to make room for a possible "Where do you want to have your base" feature in the future. This was nice. And i am also quite happy about how the worldbuilding turned out in general.
 
+- The fact that i made something that worked
+
+Going into the project, having before looked into learning Unity, i was that it was very hard. So i had very low expectations for myself. But i actually managed to make something that worked. Which i am extremely happy about!
+
 ## Conclusion on the reflection
+
+I have learned a lot of new things, and i have made a lot of progress. But i have also learned that i need to change my approach to the project. I need to be more thorough in my research, using some of the principles from the IDE1 course. Probably "Brainstorm" alot more, instead of sprinting into the first solution that comes to mind.
+
+It's been a process, for a project that has to be turned in as an exam. I am not very happy about it, but thinking about this project as a learning experience. I am really happy about!
