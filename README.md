@@ -15,6 +15,8 @@ https://youtu.be/YxNzAg245kA
 
 ## WebGL
 
+Playable at: https://wangofandango.github.io/GMD/
+
 ### Controls
 
 - Movement - WASD
@@ -27,13 +29,19 @@ https://youtu.be/YxNzAg245kA
 
 ## Blogposts
 
-- **Roll a Ball** -
-- **Game Design Document (With Milestones)**
-- **Reflections** -
-- **Devlog 1** -
-- **Devlog 2** -
-- **Devlog 3** -
-- **Devlog Final**
+- **Roll a Ball** - https://github.com/Wangofandango/GMD/blob/main/documentation/Blog%20-%20Roll-a-ball.md
+
+- **Game Design Document (With Milestones)** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Game%20Design%20Document/Game%20design%20document.md
+
+- **Reflections** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Devblogs/Reflections.md
+
+- **Devlog 1** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Devblogs/Devlog_1.md
+
+- **Devlog 2** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Devblogs/Devlog_2.md
+
+- **Devlog 3** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Devblogs/Devlog_3.md
+
+- **Devlog Final** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Devblogs/Devlog_Final
 
 ## Sources
 
