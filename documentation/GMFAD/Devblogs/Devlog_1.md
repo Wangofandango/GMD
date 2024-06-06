@@ -1,4 +1,6 @@
-# Developer Blog - Game Development Course
+# Developer Blog 1 - Game Development Course
+
+Movement and the Core Loop component called "Buying". Be able to hire new Members. And create a very simple world
 
 ## Introduction
 
@@ -40,7 +42,7 @@ I have learned a lot of new things, and i have made a lot of progress. But i hav
 ## Next steps
 
 - Looking into Scriptable objects and Databinding
-- Looking into ways to automate the worldbuilding process
+- Looking into ways to improve the worldbuilding
 - Looking into ways to make the UI more dynamic and flexible
 
 ## Acknowledgements

@@ -75,13 +75,14 @@ The game will be a single purchase game, with no in-game purchases.
 ## Gameplay Overview
 
 ### Core gameplay loop
+
 Underneath is an illustration of the core gameplay loop
 ![Core gameplay loop](./images/Core_gameplay_loop.png)
 The goal of the player is to get the furthest in the game as possible. The player will have to optimize each of the core components in order to survive the longest.
 
-
 ### Objective and Progression
-The objective of the game is to survive as long as possible. The game will have a round-based system, that will get progressively harder as the player progresses. 
+
+The objective of the game is to survive as long as possible. The game will have a round-based system, that will get progressively harder as the player progresses.
 
 Over each round a number of portals will spawn (dungeons) with timers, information about these dungeons will be displayed before the round begins. The player will have to plan and strategize which guildmembers to send to which dungeons, and which gear to equip them with. To hopefully clear the dungeons before the timer runs out.
 
@@ -92,63 +93,65 @@ If the player fails to clear the dungeons before the timer runs out, the monster
 ### Game Mechanics
 
 #### Recruitment system
-The initial recruitment system will be a simple system that will work in allignment with what the player would expect from other RPG titles such as World of Warcraft or other dungeon based RPGs. 
 
-When the player interacts with the recruitment desk, the player will be able to choose between 5 different guildmembers. Each randomly generated with different stats and class. 
+The initial recruitment system will be a simple system that will work in allignment with what the player would expect from other RPG titles such as World of Warcraft or other dungeon based RPGs.
+
+When the player interacts with the recruitment desk, the player will be able to choose between 5 different guildmembers. Each randomly generated with different stats and class.
 
 The following classes will be available:
+
 - **Tank**:
   - Physical damage: Low
   - Magic damage: Low
   - Vitality: High
-- **Mage**: 
+- **Mage**:
   - Physical damage: Low
   - Magic damage: High
   - Vitality: Low
-- **Fighter**: 
+- **Fighter**:
   - Physical damage: High
   - Magic damage: Low
   - Vitality: Medium
-- **Healer**: 
+- **Healer**:
   - Physical damage: Low
   - Magic damage: Medium
   - Vitality: Medium
   - Healing: High
 
 #### Dungeon System
+
 The initial dungeon system will be a simple system that will need to be expanded upon in future iterations of the game.
 
 The dungeons will have a timer. And if the timer rund out, the monsters will exit the dungeon and begin advancing toward to tavern. Where the player will have to fend them off. Otherwise the tavern will take damage and eventually be destroyed. Losing the game.
 
-
-
 #### Affix System
+
 The dungeons will have a very simple affix system, where each dungeon will have a random affix that will affect the monsters in the dungeon. The affixes will be displayed to the player before the round begins.
 
-The following affixes will be included in the first iteration of the game: 
+The following affixes will be included in the first iteration of the game:
+
 - **Quite Clever**: The monsters in this dungeon will take reduced damage from magic attacks.
 - **Nails for breakfast** The monsters in this dungeon will take reduced damage from physical attacks.
 
 #### Team system
+
 The dungeons will need to be taken on by a team of guildmembers, and the player will have to choose which guildmembers to send to which dungeons.
 
 The teams will be based off of 5 guildmembers, and it is up to the player how to structure these teams.
 (Generally you would like to have a tank, a healer, and 3 damage dealers)
 
-
 #### Gear and Item System
+
 Gear and items will be a very simple system in the first iteration of the game. The player will be able to buy gear and items from the item shop, and equip them on the guildmembers.
 
 Inside of the armory the player will be able to equip themselves and other guildmembers with armor and weapons to become stronger.
 
 In the first iteration of the game, each guildmember and the main player will be able to equip 1 weapon and 1 armor piece. To increase their damage and vitality respectively.
 
-#### Magic System *(Not implemented in first iteration of the game)*
-
+#### Magic System _(Not implemented in first iteration of the game)_
 
 ### Milestones
-1. Movement and the Core Loop component called "Buying/Upgrading". Be able to hire new Members and buy new items.
-2. 
 
-
-
+1. Movement and the Core Loop component called "Buying". Be able to hire new Members. And create a very simple world
+2. Have guildmembers be able to move around in the world, expand upon the tavern. Send guildmembers to dungeons.
+3. Expand upon dungeon system, have completede dungeons grant gold, make recruitments cost gold. And implement game logic for a round system.
