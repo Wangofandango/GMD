@@ -1,0 +1,15 @@
+Talking about project formalia
+
+## Old UI needed to be updated
+
+Old UI was structured around working with mouse clicking. So i had tonnes of classes that were actually handling these mouse events. And using "Highlighting" Controllers to actually show the user what he is clicking on. Afterwards he would be able to click "Recruit" to actually recruit the clicked Guildmember. This is what it looked like:
+
+![Old UI](./Images/dbfinal_OldUI.png)
+
+It was setup basically like this in the code:
+
+![Old UI Code](./Images/dbfinal_OldUIScheme.png)
+It was a mess, and by dirtly adding on click methods that would do lots of different stuff for each option. And lots of looping over child entities and stuff. It wasn't pretty!
+
+Since it has to be playable with a controller, i found out that i was able to change these into buttons. That Unity has a built in system for handling these buttons. So i changed the UI to look like this:
+![New UI](./Images/dbfinal_NewUI.png)
