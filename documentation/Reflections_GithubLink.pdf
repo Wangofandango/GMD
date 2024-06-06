@@ -1,0 +1,252 @@
+%PDF-1.3
+1 0 obj
+<< /Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R >>
+endobj
+2 0 obj
+<< /Type /Outlines /Count 0 >>
+endobj
+3 0 obj
+<< /Type /Pages
+/Kids [6 0 R
+12 0 R
+]
+/Count 2
+/Resources <<
+/ProcSet 4 0 R
+/Font << 
+/F1 8 0 R
+/F2 9 0 R
+>>
+>>
+/MediaBox [0.000 0.000 595.280 841.890]
+ >>
+endobj
+4 0 obj
+[/PDF /Text ]
+endobj
+5 0 obj
+<<
+/Creator (DOMPDF)
+/CreationDate (D:20240606221511+00'00')
+/ModDate (D:20240606221511+00'00')
+>>
+endobj
+6 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Annots [ 10 0 R ]
+/Contents 7 0 R
+>>
+endobj
+7 0 obj
+<<
+/Length 6378 >>
+stream
+
+0.000 0.000 0.000 rg
+BT 34.016 768.985 Td /F1 24.0 Tf  [(Reflections)] TJ ET
+BT 34.016 735.797 Td /F2 12.0 Tf  [(Link to the Github: )] TJ ET
+0.000 0.000 0.800 rg
+BT 129.356 735.797 Td /F2 12.0 Tf  [(https://github.com/Wangofandango/GMD)] TJ ET
+0.000 0.000 0.800 RG
+0.6 w 0 J [  ] 0 d
+129.356 733.097 m 331.016 733.097 l S
+0.000 0.000 0.000 rg
+BT 34.016 700.899 Td /F1 18.0 Tf  [(Reflection on the end result)] TJ ET
+BT 34.016 670.277 Td /F2 12.0 Tf  [(As talked about in the previous devblogs, i have been struggling with motivation. And i have been trying to )] TJ ET
+BT 34.016 656.021 Td /F2 12.0 Tf  [(find ways to keep myself motivated. I have found that the best way i could do this was to try and keep )] TJ ET
+BT 34.016 641.765 Td /F2 12.0 Tf  [(moving forward, even though the existing solution may not have been perfect. This was however after i had )] TJ ET
+BT 34.016 627.509 Td /F2 12.0 Tf  [(already spent lots of time trying to perfect the movement, grid system and the first iterations of UI. This was )] TJ ET
+BT 34.016 613.253 Td /F2 12.0 Tf  [(a mistake, and i should have moved on to the next task, and then come back to the previous task if i had time )] TJ ET
+BT 34.016 598.997 Td /F2 12.0 Tf  [(left. This would have kept me motivated, and i would have been further in the project than i am now.)] TJ ET
+BT 34.016 572.741 Td /F2 12.0 Tf  [(Lot's of the code that i have written is not perfect. It has been pretty time pressured to actually try to )] TJ ET
+BT 34.016 558.485 Td /F2 12.0 Tf  [(complete the gameplay loop. So many of the solutions on the last few sprints may not have been my best )] TJ ET
+BT 34.016 544.229 Td /F2 12.0 Tf  [(work. For example i have these cases:)] TJ ET
+BT 34.016 517.973 Td /F1 12.0 Tf  [(The Portal Closing system)] TJ ET
+BT 34.016 491.717 Td /F2 12.0 Tf  [(The portal closing system is really only a loop that is run within the Update function. Very much not )] TJ ET
+BT 34.016 477.461 Td /F2 12.0 Tf  [(optimized, very quick, ugly and dirty. And honestly i hate it. But it works. And it was the best solution i )] TJ ET
+BT 34.016 463.205 Td /F2 12.0 Tf  [(could come up with in the time i had. I would have loved to make a more elegant solution. Which i have )] TJ ET
+BT 34.016 448.949 Td /F2 12.0 Tf  [(talked about in a previous devblog \(Devblog_3\).)] TJ ET
+BT 34.016 422.693 Td /F1 12.0 Tf  [(The Guildmember movement system)] TJ ET
+BT 34.016 396.437 Td /F2 12.0 Tf  [(Also mentioned in the previous devlog \(3\). The guildmember movement system is also very dirty. I never )] TJ ET
+BT 34.016 382.181 Td /F2 12.0 Tf  [(got Navmesh to work, i believe i was very close, but i never got it to work. So the guildmembers ended up )] TJ ET
+BT 34.016 367.925 Td /F2 12.0 Tf  [(just running in a straight line towards the portal... )] TJ ET
+BT 274.004 367.925 Td /F1 12.0 Tf  [(Terrible)] TJ ET
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+274.004 365.225 m 316.664 365.225 l S
+BT 34.016 341.669 Td /F1 12.0 Tf  [(The UI)] TJ ET
+BT 34.016 315.413 Td /F2 12.0 Tf  [(I made a mistake that we actually have been taught to prevent in the IDE1 course, which i pretty funny. )] TJ ET
+BT 34.016 301.157 Td /F2 12.0 Tf  [(When creating the game i sprinted into the first solution that came to mind. )] TJ ET
+BT 397.652 301.157 Td /F2 12.0 Tf  [(")] TJ ET
+BT 402.548 301.157 Td /F2 12.0 Tf  [(I have all these systems where )] TJ ET
+BT 34.016 286.901 Td /F2 12.0 Tf  [(the user needs to make descisions )] TJ ET
+BT 198.656 286.901 Td /F1 12.0 Tf  [(I must Make UI!!)] TJ ET
+BT 288.308 286.901 Td /F2 12.0 Tf  [(")] TJ ET
+BT 293.204 286.901 Td /F2 12.0 Tf  [(. But i never stopped to think if there was a better way )] TJ ET
+BT 34.016 272.645 Td /F2 12.0 Tf  [(to do it. I could have made the game entirely world based, and made the UI a part of the world. This would )] TJ ET
+BT 34.016 258.389 Td /F2 12.0 Tf  [(have made the game feel more alive, and less like a )] TJ ET
+BT 283.952 258.389 Td /F2 12.0 Tf  [(")] TJ ET
+BT 288.848 258.389 Td /F2 12.0 Tf  [(Clicker)] TJ ET
+BT 324.176 258.389 Td /F2 12.0 Tf  [(")] TJ ET
+BT 329.072 258.389 Td /F2 12.0 Tf  [( game. But as mentioned, i sadly didn't end up )] TJ ET
+BT 34.016 244.133 Td /F2 12.0 Tf  [(having the time to rework the UI. So it ended up just being bad :\(.)] TJ ET
+BT 34.016 217.877 Td /F2 12.0 Tf  [(Some of the things that i have actually been happy about. Are the following solutions:)] TJ ET
+57.816 194.726 m 
+57.816 195.276 57.589 195.822 57.201 196.211 c
+56.812 196.600 56.266 196.826 55.716 196.826 c
+55.166 196.826 54.620 196.600 54.231 196.211 c
+53.842 195.822 53.616 195.276 53.616 194.726 c
+53.616 194.176 53.842 193.630 54.231 193.241 c
+54.620 192.853 55.166 192.626 55.716 192.626 c
+56.266 192.626 56.812 192.853 57.201 193.241 c
+57.589 193.630 57.816 194.176 57.816 194.726 c f
+BT 64.016 179.621 Td /F2 12.0 Tf  [(The character generation system \(Talked about in Devlog_3\))] TJ ET
+57.816 156.470 m 
+57.816 157.020 57.589 157.566 57.201 157.955 c
+56.812 158.344 56.266 158.570 55.716 158.570 c
+55.166 158.570 54.620 158.344 54.231 157.955 c
+53.842 157.566 53.616 157.020 53.616 156.470 c
+53.616 155.920 53.842 155.374 54.231 154.985 c
+54.620 154.597 55.166 154.370 55.716 154.370 c
+56.266 154.370 56.812 154.597 57.201 154.985 c
+57.589 155.374 57.816 155.920 57.816 156.470 c f
+BT 64.016 141.365 Td /F2 12.0 Tf  [(The animations of the character \(Talked about in Devlog_2\))] TJ ET
+57.816 118.214 m 
+57.816 118.764 57.589 119.310 57.201 119.699 c
+56.812 120.088 56.266 120.314 55.716 120.314 c
+55.166 120.314 54.620 120.088 54.231 119.699 c
+53.842 119.310 53.616 118.764 53.616 118.214 c
+53.616 117.664 53.842 117.118 54.231 116.729 c
+54.620 116.341 55.166 116.114 55.716 116.114 c
+56.266 116.114 56.812 116.341 57.201 116.729 c
+57.589 117.118 57.816 117.664 57.816 118.214 c f
+BT 64.016 103.109 Td /F2 12.0 Tf  [(The worldbuilding, and the graphics of the game \(Talked about in Devlog_2\))] TJ ET
+57.816 79.958 m 
+57.816 80.508 57.589 81.054 57.201 81.443 c
+56.812 81.832 56.266 82.058 55.716 82.058 c
+55.166 82.058 54.620 81.832 54.231 81.443 c
+53.842 81.054 53.616 80.508 53.616 79.958 c
+53.616 79.408 53.842 78.862 54.231 78.473 c
+54.620 78.085 55.166 77.858 55.716 77.858 c
+56.266 77.858 56.812 78.085 57.201 78.473 c
+57.589 78.862 57.816 79.408 57.816 79.958 c f
+BT 64.016 64.853 Td /F2 12.0 Tf  [(The movement, interaction and player character)] TJ ET
+endstream
+endobj
+8 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+9 0 obj
+<< /Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+>>
+endobj
+10 0 obj
+<< /Type /Annot
+/Subtype /Link
+/A 11 0 R
+/Border [0 0 0]
+/H /I
+/Rect [ 129.3557 734.7175 331.0157 746.5975 ]
+>>
+endobj
+11 0 obj
+<< /Type /Action
+/S /URI
+/URI (https://github.com/Wangofandango/GMD)
+>>
+endobj
+12 0 obj
+<< /Type /Page
+/Parent 3 0 R
+/Contents 13 0 R
+>>
+endobj
+13 0 obj
+<<
+/Length 3261 >>
+stream
+
+0.000 0.000 0.000 rg
+0.000 0.000 0.000 RG
+0.6 w 0 J [  ] 0 d
+BT 34.016 784.469 Td /F2 12.0 Tf  [(The basis of the game, the movement is actually something that i am pretty proud of, the animations also tie )] TJ ET
+BT 34.016 770.213 Td /F2 12.0 Tf  [(together nicely with this. And i am quite happy about the end result of this.)] TJ ET
+57.816 747.062 m 
+57.816 747.612 57.589 748.158 57.201 748.547 c
+56.812 748.936 56.266 749.162 55.716 749.162 c
+55.166 749.162 54.620 748.936 54.231 748.547 c
+53.842 748.158 53.616 747.612 53.616 747.062 c
+53.616 746.512 53.842 745.966 54.231 745.577 c
+54.620 745.189 55.166 744.962 55.716 744.962 c
+56.266 744.962 56.812 745.189 57.201 745.577 c
+57.589 745.966 57.816 746.512 57.816 747.062 c f
+BT 64.016 743.957 Td /F2 12.0 Tf  [(The worldbuilding, with grids, the tavern and the collissions.)] TJ ET
+BT 34.016 717.701 Td /F2 12.0 Tf  [(The tavern actually has it's own grid, with its own layers of tiles. This was to make room for a possible )] TJ ET
+BT 530.456 717.701 Td /F2 12.0 Tf  [(")] TJ ET
+BT 34.016 703.445 Td /F2 12.0 Tf  [(Where do you want to have your base)] TJ ET
+BT 215.636 703.445 Td /F2 12.0 Tf  [(")] TJ ET
+BT 220.532 703.445 Td /F2 12.0 Tf  [( feature in the future. This was nice. And i am also quite happy about )] TJ ET
+BT 34.016 689.189 Td /F2 12.0 Tf  [(how the worldbuilding turned out in general.)] TJ ET
+57.816 666.038 m 
+57.816 666.588 57.589 667.134 57.201 667.523 c
+56.812 667.912 56.266 668.138 55.716 668.138 c
+55.166 668.138 54.620 667.912 54.231 667.523 c
+53.842 667.134 53.616 666.588 53.616 666.038 c
+53.616 665.488 53.842 664.942 54.231 664.553 c
+54.620 664.165 55.166 663.938 55.716 663.938 c
+56.266 663.938 56.812 664.165 57.201 664.553 c
+57.589 664.942 57.816 665.488 57.816 666.038 c f
+BT 64.016 662.933 Td /F2 12.0 Tf  [(The fact that i made something that worked)] TJ ET
+BT 34.016 636.677 Td /F2 12.0 Tf  [(Going into the project, having before looked into learning Unity, i was that it was very hard. So i had very )] TJ ET
+BT 34.016 622.421 Td /F2 12.0 Tf  [(low expectations for myself. But i actually managed to make something that worked. Which i am extremely )] TJ ET
+BT 34.016 608.165 Td /F2 12.0 Tf  [(happy about!)] TJ ET
+BT 34.016 573.267 Td /F1 18.0 Tf  [(Conclusion on the reflection)] TJ ET
+BT 34.016 542.645 Td /F2 12.0 Tf  [(I have learned a lot of new things, and i have made a lot of progress. But i have also learned that i need to )] TJ ET
+BT 34.016 528.389 Td /F2 12.0 Tf  [(change my approach to the project. I need to be more thorough in my research, using some of the principles )] TJ ET
+BT 34.016 514.133 Td /F2 12.0 Tf  [(from the IDE1 course. Probably )] TJ ET
+BT 190.652 514.133 Td /F2 12.0 Tf  [(")] TJ ET
+BT 195.548 514.133 Td /F2 12.0 Tf  [(Brainstorm)] TJ ET
+BT 249.548 514.133 Td /F2 12.0 Tf  [(")] TJ ET
+BT 254.444 514.133 Td /F2 12.0 Tf  [( alot more, instead of sprinting into the first solution that )] TJ ET
+BT 34.016 499.877 Td /F2 12.0 Tf  [(comes to mind.)] TJ ET
+BT 34.016 473.621 Td /F2 12.0 Tf  [(It's been a process, for a project that has to be turned in as an exam. I am not very happy about it, but )] TJ ET
+BT 34.016 459.365 Td /F2 12.0 Tf  [(thinking about this project as a learning experience. I am really happy about!)] TJ ET
+endstream
+endobj
+xref
+0 14
+0000000000 65535 f 
+0000000009 00000 n 
+0000000074 00000 n 
+0000000120 00000 n 
+0000000291 00000 n 
+0000000320 00000 n 
+0000000434 00000 n 
+0000000516 00000 n 
+0000006946 00000 n 
+0000007054 00000 n 
+0000007163 00000 n 
+0000007291 00000 n 
+0000007379 00000 n 
+0000007444 00000 n 
+trailer
+<<
+/Size 14
+/Root 1 0 R
+/Info 5 0 R
+>>
+startxref
+10758
+%%EOF

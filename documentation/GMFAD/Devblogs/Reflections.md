@@ -1,5 +1,7 @@
 # Reflections
 
+Link to the Github: https://github.com/Wangofandango/GMD
+
 ## Reflection on the end result
 
 As talked about in the previous devblogs, i have been struggling with motivation. And i have been trying to find ways to keep myself motivated. I have found that the best way i could do this was to try and keep moving forward, even though the existing solution may not have been perfect. This was however after i had already spent lots of time trying to perfect the movement, grid system and the first iterations of UI. This was a mistake, and i should have moved on to the next task, and then come back to the previous task if i had time left. This would have kept me motivated, and i would have been further in the project than i am now.
