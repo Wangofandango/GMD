@@ -31,7 +31,15 @@ namespace GameLogic
                 return _Instance;
             }
         }
-
+        
+        public GameObject GameLogic;
+        public PortalManager PortalManager { get; set; }
+        public int RoundNumber { get; set; }
+        
+        public GoldCounter GoldCounter { get; set; }
+        
+        public RoundCounter RoundCounter { get; set; }
+        
         private static void SubscribeToEvents()
         {
             Instance.PortalManager.DungeonCleared += OnDungeonCleared;
@@ -42,19 +50,16 @@ namespace GameLogic
             //Add gold to the user
             int minGold = 10;
             int maxGold = 30;
-            int gold = UnityEngine.Random.Range(minGold, maxGold);
-            FindObjectOfType<GoldCounter>().AddGold(gold);
+            int gold = UnityEngine.Random.Range(minGold, maxGold); 
+            _Instance.GoldCounter.AddGold(gold);
         }
-
-        public GameObject GameLogic;
-        public PortalManager PortalManager { get; set; }
-        public int RoundNumber { get; set; }
-
         
 
         private static void InstansiateFields()
         {
             _Instance.PortalManager = _Instance.GameLogic.GetComponentInChildren<PortalManager>();
+            _Instance.GoldCounter = FindObjectOfType<GoldCounter>();
+            _Instance.RoundCounter = FindObjectOfType<RoundCounter>();
         }
         
 
@@ -70,9 +75,8 @@ namespace GameLogic
         {
             RoundNumber++;
             
-            FindObjectOfType<RoundCounter>().NextRound(RoundNumber); //This doesn't seem to be very optimized though
+            RoundCounter.NextRound(RoundNumber); 
             
-            Debug.Log(RoundNumber);
             PortalManager.InitiatePortals(RoundNumber);
             Debug.Log("Round " + RoundNumber + " has started!");
         }

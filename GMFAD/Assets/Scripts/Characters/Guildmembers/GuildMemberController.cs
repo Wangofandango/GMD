@@ -33,15 +33,13 @@ namespace Characters.Guildmembers
 
         private void OnEnable()
         {
-            StartCoroutine(StartWalking());
-
+            
             //Health.MaxHealth = Data.Stats.Health;
-
-            //Subscribe to any other events
         }
 
-        public void RecruitmentSuccess()
+        public void BeginWalking()
         {
+            StartCoroutine(StartWalking());
         }
 
         public IEnumerator StartWalking()
@@ -93,7 +91,7 @@ namespace Characters.Guildmembers
         public void OnAddedToInventory()
         {
             Debug.Log(Data.Name + ": Halleliujah! I have been recruited!");
-            StartCoroutine(StartWalking()); 
+            BeginWalking();
         }
 
         public void OnRemovedFromInventory()

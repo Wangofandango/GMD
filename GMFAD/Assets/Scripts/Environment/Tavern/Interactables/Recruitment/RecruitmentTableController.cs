@@ -17,10 +17,12 @@ namespace Interactables
         [SerializeField]
         public RecruitmentUI recruitmentUI;
 
-        //[SerializeField] public InventoryManager TavernInventoryManager;
 
         
         private GameObject _interactor;
+        
+        //save players movement
+        private Movement.Movement _playerMovement;
         
         public TavernManager tavernManager;
         
@@ -45,15 +47,24 @@ namespace Interactables
             recruitmentUI.Hide();
 
             tavernManager = GetComponentInParent<TavernManager>();
-            //TavernInventoryManager = GetComponentInParent<InventoryManager>();
         }
 
         private void FinalizeRecruitment(GuildMemberData guildMemberData)
         {
+            if (guildMemberData == null)
+            {
+                //Enable the player's movement
+                _playerMovement.EnableMovement();
+                return;
+            }
+            
             tavernManager.AddMember(guildMemberData);
             
             _guildMembers.Clear();
             recruitmentUI.Hide();
+            
+            //Enable the player's movement
+            _playerMovement.EnableMovement();
             
             Debug.Log("Recruiting " + guildMemberData.Name);
         }
@@ -83,6 +94,11 @@ namespace Interactables
             if (interactor.CompareTag("Player"))
             {
                 _interactor = interactor;
+                 //Disable the player's movement
+                _playerMovement = interactor.GetComponent<Movement.Movement>();
+                
+                _playerMovement.DisableMovement();
+
                 InitiateRecruitment(interactor);
             }
         }

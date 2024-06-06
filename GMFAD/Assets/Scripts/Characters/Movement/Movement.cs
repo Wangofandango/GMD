@@ -12,8 +12,9 @@ namespace Movement
         private Animator _animator;
         private static readonly int MoveX = Animator.StringToHash("moveX");
         private static readonly int MoveY = Animator.StringToHash("moveY");
-        private static readonly int isWalking = Animator.StringToHash("isWalking");
         private SpriteRenderer _spriteRenderer;
+
+        private bool ShouldMove = true;
 
         private void Start()
         {
@@ -24,6 +25,11 @@ namespace Movement
 
         public void Move(Vector2 input)
         {
+            if (!ShouldMove)
+            {
+                return;
+            }
+            
             _rb.velocity = input * movementSpeed;
             
             
@@ -48,6 +54,16 @@ namespace Movement
                 _animator.Play("Player_Idle");
             }
             
+        }
+        
+        public void DisableMovement()
+        {
+            ShouldMove = false;
+        }
+        
+        public void EnableMovement()
+        {
+            ShouldMove = true;
         }
 
         private void Rotate(Vector2 direction)
