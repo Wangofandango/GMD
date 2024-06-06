@@ -1,7 +1,5 @@
 # Developer Blog 1 - Game Development Course
 
-Movement and the Core Loop component called "Buying". Be able to hire new Members. And create a very simple world
-
 ## Introduction
 
 The current state of the game is a simple 2d top down game with a player character that can move around. Use "Interact" to interact with a recruitment table. And then i have made some game logic around randomly generating characters to choose from. With UI to actually make the choice.

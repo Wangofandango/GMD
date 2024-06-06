@@ -1,7 +1,5 @@
 # Developer Blog 1 - Game Development Course
 
-Have guildmembers be able to move around in the world, expand upon the tavern. Send guildmembers to dungeons.
-
 ## State of the game
 
 Currently the game is looking like the below picture, a small arena where there will be space for portals to be summoned. The player now has animation and is able to interact to both the "Recruitment Table" to "hire" new guildmembers. And a newly added "Shop table" that currently only has UI implemented.
