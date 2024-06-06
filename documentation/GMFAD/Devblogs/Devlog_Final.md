@@ -68,6 +68,14 @@ Currently you only press 'E' (on keyboard) to send them to dungeons. I would've 
 Currently you can't lose the game. You can't even finish it, actually. This is something that i would've really much liked to have had time to implement. The plan was to have monsters attack the tavern, when the "timer" for the dungeon ran out. And if you didn't have enough guildmembers to defend the tavern, you would lose.
 I already had some monster animations in place for this, but i didn't get around to implement them.
 
+- **Actually implementing the Shop**
+
+Something that i haven't really mentioned up until now is the fact that i actually made some pretty nice UI for a shop interface, that coincidentally looks a lot like the Clash of Clans shop. This is the UI that i made for it:
+
+![Shop UI](./Images/dbfinal_ShopUI.png)
+
+It actually has a scrollable feature (using a scroll rect) going sideways, which i think is really cool. But i never got around to the shop and/or item system. So it's just there, looking pretty.
+
 ## Conclusion
 
 Being a single person for this project, i still had hoped i got more done. But i'm happy with what i've done. I've learned a lot about Unity and C# in the process. And i'm happy about that.
