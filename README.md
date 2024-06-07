@@ -43,7 +43,7 @@ Roll a ball game playable at: https://wangofandango.github.io/GMD-roll-a-ball/
 
 - **Devlog 3** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Devblogs/Devlog_3.md
 
-- **Devlog Final** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Devblogs/Devlog_Final
+- **Devlog Final** - https://github.com/Wangofandango/GMD/blob/main/documentation/GMFAD/Devblogs/Devlog_Final.md
 
 ## Sources
 
